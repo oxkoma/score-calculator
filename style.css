@@ -1,0 +1,142 @@
+body {
+    font-family: 'Rubik', sans-serif;
+    font-size: 14px;
+    color: #292929;
+    margin-bottom: 150px;
+}
+
+h1,
+h3 {
+    text-align: center;
+}
+
+h3 {
+    font-size: 1.3em;
+    font-weight: 600;
+}
+
+p {
+    FONT-SIZE: 1.2em;
+    font-weight: 200;
+    font-style: inherit;
+    display: inline-block;
+    align-items: center;
+    /*flex-wrap: nowrap;*/
+    align-content: center;
+    margin-left: 1em;
+    margin-right: 1em;
+}
+
+ul,
+li {
+    font-size: 1.1em;
+}
+
+.calculate-form {
+    width: 600px;
+    height: 1100px;
+    padding: 0px 60px 40px 60px;
+}
+
+.calculate-forms {
+    max-width: 840px;
+    margin: 0 auto 20px auto;
+}
+
+input.numbers,
+select.numbers {
+    display: inline-block;
+    margin: 1em;
+    padding: 10px 20px;
+    border: 1px solid #2d598066;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    font-size: 1em;
+}
+
+input.submit_form {
+    height: 2.5em;
+    width: 40%;
+    display: inline-block;
+    padding-top: 5px;
+    background-color: #f7994f;
+    border: 1px solid #f6994f;
+    border-radius: 4px;
+    font-size: 1.15em;
+    letter-spacing: 1px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #ffffff;
+    box-shadow: 1px 5px 10px 5px rgb(247, 136, 48) inset;
+    cursor: pointer;
+}
+
+input.submit_form:hover {
+    background-color: #bf7135;
+    transition: background-color 0.3s;
+}
+
+div.answer-text,
+div.error-text {
+    font-size: 28px;
+}
+
+div.answer-text {
+    color: #2e2e2f;
+    text-align: center;
+    margin: 1em auto;
+}
+
+div.error-text {
+    color: red;
+}
+
+div.check-box {
+    display: block;
+    margin: 20px;
+}
+
+div.check-el {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 10px 0px;
+    font-size: 1.2em;
+}
+
+input.check-inp {
+    font-size: 1.2em;
+    margin: 0px 15px 0px 0px;
+}
+
+label.check_test {
+    font-size: 1em;
+    display: flex;
+    align-items: center;
+}
+
+div.predmet {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+div.item {
+    display: flex;
+    margin: 20px;
+}
+
+@media(max-width: 600px) {
+    div.predmet {
+        width: auto;
+    }
+
+    input.submit_form {
+        width: 100%;
+    }
+
+    div.item {
+        justify-content: center;
+    }
+}

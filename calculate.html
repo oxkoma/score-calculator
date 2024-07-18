@@ -1,0 +1,87 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="style.css" type="text/css" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Калькулятор конкурсного бала. Приймальна комісія ДДМУ">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+</head>
+
+<body>
+	<h1>Калькулятор конкурсного бала</h1>
+	<form action='' method='POST' class="calculate-forms" id="form_calc">
+		<p>Оберіть спеціальність:</p>
+		<div class="check-box">
+			<div class="check-el">
+				<input type="radio" class="check-inp" name="speciality" value="med" checked>
+				<label class="check_test">медицина / стоматологія / реабілітація / медична психологія</label>
+			</div>
+			<div class="check-el">
+				<input type="radio" class="check-inp" name="speciality" value="pharm">
+				<label class="check_test">фармація</label>
+			</div>
+		</div>
+		<p>Оберіть тип сертифікатів:</p>
+		<div class="check-box">
+			<div class="check-el">
+				<input type="radio" class="check-inp" name="test" value="nmt" required checked>
+				<label class="check_test">національний мультипредметний тест (НМТ) 2024</label>
+			</div>
+			<div class="check-el">
+				<input type="radio" class="check-inp" name="test" value="zno" required>
+				<label class="check_test">зовнішнє незалежне оцінювання (ЗНО) 2021 / НМТ 2022 / НМТ 2023</label>
+			</div>
+		</div>
+
+		<p>Введіть бали з предметів:</p>
+		<div class="predmet">
+			<input type="text" class="numbers" name="mova" maxlength="3" required placeholder="Українська мова (100-200)"
+			pattern="^(1\d{2})|200$|1[0-9][0-9](\.[0-9])" 
+			oninvalid="this.setCustomValidity('Українська мова. Формат: 100-200')" oninput="setCustomValidity('')">
+
+			<input type="text" class="numbers" name="math" maxlength="3" required placeholder="Математика (100-200)"
+			pattern="^(1\d{2})|200$|1[0-9][0-9](\.[0-9])" 
+			oninvalid="this.setCustomValidity('Математика. Формат: 100-200')" oninput="setCustomValidity('')">
+
+			<input type="text" class="numbers" name="history" maxlength="3" required placeholder="Історія України (100-200)"
+			pattern="^(1\d{2})|200$|1[0-9][0-9](\.[0-9])" 
+			oninvalid="this.setCustomValidity('Історія України. Формат: 100-200')" oninput="setCustomValidity('')">
+
+			<p>Оберіть предмет за вибором:</p>
+			<select name="free_ch" class="numbers" required>
+				<option value="" selected disabled>Оберіть предмет</option>
+				<option value="biology" >Біологія</option>
+				<option value="physics">Фізика</option>
+				<option value="chemistry">Хімія</option>
+				<option value="foreign">Іноземна мова</option>
+				<option value="literature">Українська література</option>
+				<option value="geographic">Географія</option>
+				<option value="history" disabled>Історія України</option>
+			</select>
+			<p>Введіть бали з предмету за вибором:</p>
+			<input type="text" class="numbers" name="free" maxlength="3" required placeholder="Предмет за вибором (100-200)"
+			pattern="^(1\d{2})|200$|1[0-9][0-9](\.[0-9])" 
+			oninvalid="this.setCustomValidity('Предмет за вибором. Формат: 100-200')" oninput="setCustomValidity('')">
+		</div>
+
+		<p>Оберіть відповідні коефіцієнти:</p>
+		<div class="check-box">
+			<div class="check-el">
+				<input type="checkbox" class="check-inp" name="check-k" value="A">
+				<label class="check_test">галузевий коефіцієнт (1,00)</label>
+			</div>
+			<div class="check-el">
+				<input type="checkbox" class="check-inp" name="check-k" value="B">
+				<label class="check_test">регіональний коефіцієнт (1,04)</label>
+			</div>
+		</div>
+		<div class="item">
+			<input class="submit_form" type="submit" name="submit" value="Розрахувати">
+		</div>
+	</form>
+	
+	<script src="app.js"></script>
+</body>
+</html>
