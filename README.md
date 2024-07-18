@@ -1,2 +1,2 @@
 # score-calculator
-calculator for entries 2024
+campaign entry score calculator 2024
